@@ -1,0 +1,38 @@
+.new-tweet {
+  margin: auto;
+  width: 90%; 
+  display: none;
+
+}
+
+.new-tweet h2 {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;}
+
+.new-tweet textarea {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+  display: block;
+  width: 100%;
+}
+main section span {
+  display: inline-block;
+  margin-left: 90%;
+}
+
+.tweetOut {
+  border-radius: 12px;
+  margin: 2%;
+  border: 2px solid black;
+  background: transparent;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.tweetOut:hover {
+  background: green
+}
