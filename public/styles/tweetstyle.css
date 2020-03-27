@@ -2,6 +2,15 @@
 
 }
 
+
+
+.profilePic {
+  display: inline-block;
+  position: relative;
+  margin: 1%;
+}
+
+
 .tweetstyle {
   margin-top: 5%;
   border: solid;
@@ -22,11 +31,6 @@
   visibility: visible;
 }
 
-.profilePic {
-  display: inline-block;
-  position: relative;
-  margin: 1%;
-}
 
 .tweetstyle h2 {
 position: relative;
@@ -55,14 +59,14 @@ footer {
 }
 
 
+.profilePic {
+  height: 60px;
+  width: 60px;
+}
+
 .time {
   font-size: small;
   margin-left: 2%;  
   margin-top: 1%;
   margin-bottom: 0.5%;
-}
-
-.profilePic {
-  height: 60px;
-  width: 60px;
 }
