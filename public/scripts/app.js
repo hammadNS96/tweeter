@@ -1,7 +1,7 @@
 //Loads and renders tweets that are inputed in
 
 $(document).ready(function () {
-  //Posts a tweet to /tweets and loads it on the page
+  //Posts tweet 
   $("#submitTweet").submit(function (event) {
     event.preventDefault()
     let values = $(this).serialize();
@@ -17,8 +17,7 @@ $(document).ready(function () {
     });
   });
 
-  //this function gets the tweet from /tweets and
-  //runs its through the markup for the html format
+  //Gets tweet and runs it through a markup
   const loadTweet = function () {
     $('#tweets-container').empty();
     $.ajax({
@@ -31,8 +30,7 @@ $(document).ready(function () {
     });
   };
 
-  //loops through the array of tweets and calls the callback
-  //to render the html markup
+  //loops through tweet arrays and calls  a callback
   const renderTweet = function (arr) {
     for (let i of arr) {
       createTweetElement(i);
@@ -40,10 +38,9 @@ $(document).ready(function () {
   };
 
 
-  //The actual html markup of the tweets that will be shown on
-  //the page.
+  //The html markup that will be shown
   const createTweetElement = function (i) {
-    //Help against code injections
+    //For security against code injections
     const escape = function (str) {
       let div = document.createElement('div');
       div.appendChild(document.createTextNode(str));

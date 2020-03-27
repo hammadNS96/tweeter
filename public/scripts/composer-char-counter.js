@@ -4,7 +4,7 @@ $(document).ready(function () {
     let num = this.value.length;
     let counter = $(".new-tweet form textarea").siblings('.counter').text(140 - num);
 
-    //Decides if the counter will be black or red
+    //Counter black or red
     if (num > 140) {
       counter.css("color", "red");
     }
@@ -14,7 +14,7 @@ $(document).ready(function () {
     if (num > 0) {
       $(".emptytexterr").slideUp(1000);
     }
-    //Disables the button and call the error toggle if the char count is at -1 or below
+    //Disables text input and displays an error
     if (num === 141) {
       $(".texterr").slideToggle(1000);
     }
@@ -26,7 +26,7 @@ $(document).ready(function () {
     }
   });
 
-  //Brings down an error message when you try to submit nothing
+  //Shows error message when field is empty
   $('.tweetOut').on('click', function () {
     let num = $('.new-tweet form textarea').val().length;
     if (num === 0) {
