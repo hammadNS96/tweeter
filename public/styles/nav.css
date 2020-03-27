@@ -1,0 +1,43 @@
+nav {
+  background-color:#4056A1;
+  height: 120px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  font-family: 'Bungee', cursive;
+  color:#ffff;
+}
+
+ .top-of-page {
+  display: flex;
+  justify-content: flex-end;
+ }
+
+ .tweeter {
+  margin-right: auto;
+  position: relative;
+  top: 1.5em;
+  left: 1.5em;
+  right: 1.5em;
+  bottom: 1.5em;
+ }
+
+.button{
+  margin-right: 5%;
+  margin-top: 10%; 
+  text-align: center; 
+  border-radius: 12px;
+  border: 3px solid black;
+  background: transparent;
+  transition: 1s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: lightblue;
+}
+
+.logo {
+  width: 100x;
+  height: 100px;
+}

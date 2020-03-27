@@ -1,0 +1,68 @@
+@media only screen and (min-width: 1024px) {
+
+}
+
+.tweetstyle {
+  margin-top: 5%;
+  border: solid;
+  margin-bottom: 5%;
+  transition: background-color 1s;
+}
+
+.tweetstyle:hover {
+  box-shadow: 5px 5px 3px 2px rgba(0,0,0,.8); 
+  background-color: #cfd7e6;
+}
+
+.hashtag {
+  visibility: hidden;
+}
+
+.tweetstyle:hover .hashtag {
+  visibility: visible;
+}
+
+.profilePic {
+  display: inline-block;
+  position: relative;
+  margin: 1%;
+}
+
+.tweetstyle h2 {
+position: relative;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+}
+
+.hashtag {
+  margin-left: auto;
+  margin-right: 1%;
+}
+
+.content {
+  margin-top: 5%;
+  margin-left: 2%;
+  margin-right: 2%;
+  border-bottom: 1px solid black;
+}
+
+.content p {
+  width: 100%;
+  word-wrap: break-word;
+}
+
+
+.time {
+  font-size: small;
+  margin-left: 2%;  
+  margin-top: 1%;
+  margin-bottom: 0.5%;
+}
+
+.profilePic {
+  height: 60px;
+  width: 60px;
+}

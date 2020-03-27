@@ -1,39 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+<head>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
-    <!-- Fonts for Bungee and Source Sans Pro-->
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+
+  <!-- Fonts for Bungee and Source Sans Pro-->
   <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
     rel="stylesheet">
 
+  <!--Style Sheets for CSS-->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweetstyle.css" type="text/css" />
 
+  <!-- Scripts-->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="/scripts/app.js"></script>
+  <script type="text/javascript" src="/scripts/toggle.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+</head>
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<body>
+  <!--Top blue bar-->
+  <nav class="top-of-page">
+    <span class="tweeter">tweeter</span>
+    <div class="write-a-tweet-box">
+      <button class="button" type="button">Write a tweet!</button>
+    </div>
+  </nav>
+  <!--Profile picture and name-->
+  <header>
+    <div>
+      <img class="img" src="/images/profile-hex.png">
+    </div>
+    <br>
+    <div>
+      <h2 class="name">Hammad Seehar</h2>
+    </div>
+  </header>
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+  <!--The compose tweet area-->
+  <main class="container">
+    <div class="texterr" hidden> Your text is too long</div>
+    <div class="emptytexterr" hidden>You need to type something in order to tweet! </div>
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form id="submitTweet" action="/tweets/" method="POST">
+        <textarea class="text" name="text" placeholder="What are you humming about?"></textarea>
+        <input class="tweetOut" type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
 
-    <!-- Added style sheets for css -->
-     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
-     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <!--app.js renders the data for the tweet bodies here-->
+    <div id="tweets-container"></div>
 
+  </main>
+</body>
 
-  </head>
-
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-    </nav>
-
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
 </html>
